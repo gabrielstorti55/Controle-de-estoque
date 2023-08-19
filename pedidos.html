@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pedidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">5,5
+    <title>Projeto</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            FOTO
+            <img src="" alt="">
+        </div>
+        <div id="input">
+            <input type="text" class="pesquisa" placeholder=" Search...">  
+            <button type="submit" id="lupaheader"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+        </div>
+    </header>
+
+    <aside>
+        <div id="esquerda">
+            <div id="esquerda1" class="caixaesquerda-principal">
+                <h5>Indian Silver</h5>
+            </div>
+            <div id="esquerdapesquisa">    
+                <input type="text" placeholder=" Search..." style="width: 263px; height: 70px; padding: 0px; vertical-align: middle; font-size: 16px; color: white;">
+                <button id="lupa" type="submit" > <i class="fa-solid fa-magnifying-glass"></i> </button>
+            </div>
+            <div id="esquerdahome" class="caixaesquerda">
+                <a class="geralesquerda" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </div>    
+            <div id="esquerdahome2" class="caixaesquerda">
+                <a class="geralesquerda" href="pedidos.html"> <i class="fa-solid fa-pen-to-square"></i> Pedidos</a>
+            </div> 
+            <div id="esquerdahome3" class="caixaesquerda">
+                <a class="geralesquerda" href="pedras.html"> <i class="fa-sharp fa-solid fa-house"></i> Pedras</a>
+            </div> 
+            <div id="esquerdahome4" class="caixaesquerda">
+                <a class="geralesquerda" href="calendario.html"> <i class="fa-regular fa-calendar"></i> Calendario</a>
+            </div>
+            <div id="esquerdahome5" class="caixaesquerda">
+                <a class="geralesquerda"> <i class="fa-solid fa-sliders"></i> Settings</a>
+            </div> 
+        </div>
+    </aside>
+
+    <div id="bodyUsuario">
+        <div id="criarNovo">
+            <button id="botaoMais" class="BotaoPedidos" onclick="CriarNovo()"> <i class="fa-regular fa-plus"></i> </button>
+            <div id="myModal" class="modal">
+                <form>
+                  <div class="modal-content" id="janela">
+                        <h2>Crie um novo pedido</h2>
+                
+                        <label for="ModelsNome">Nome:</label>
+                        <input type="text" required class="Models" id="ModelsNome" name="nome">
+                
+                        <label for="ModelsFeito">Pedido feito:</label>
+                        <input type="date" required class="Models" id="ModelsFeito" name="pedido_feito">
+                
+                        <label for="ModelsEntregue">Pedido entregue:</label>
+                        <input type="date" required class="Models" id="ModelsEntregue" name="pedido_entregue">
+
+                        <label for="ModelsDescricao">Descrição:</label>
+                        <textarea name="txtDescricao" id="ModelsDescricao" cols="30" rows="10" class="Models"></textarea>
+
+                        <div id="botoes">
+                            <input id="botaoCriar" type="button" value="Criar" onclick="Criar(nome.value, pedido_feito.value, pedido_entregue.value, txtDescricao.value)">
+                            <button id="botaoFechar" onclick="closeModal()">Fechar</button>
+                            
+                        </div>
+                  </div>
+                </form>
+              </div>
+        </div> 
+
+        <div id="dtPessoas">
+            <table id="tbPessoas">
+                <thead>
+                    <tr>
+                        <td id="codigoPedido"></td>
+                        <td>Nome</td>
+                        <td>Data Feito</td>
+                        <td>Data Entregue</td>
+                        <td>Descrição</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="JS.js"></script>
+</body>
+</html>

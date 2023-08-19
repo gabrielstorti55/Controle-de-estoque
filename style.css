@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:darkgray;
+}
+
+header {
+    position:relative;
+    bottom: 20px;
+    background: #115e6d;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin-top: none;
+    padding: 11px;
+    width: 100%;
+    height: 68px;
+    z-index: 1;
+}
+
+#logo {
+    border: 1px solid white;
+    width: 70px;
+    height: 45px;
+    /* margin-left: 800px; */
+    position: relative;
+    left: 94%;
+}
+
+#input {
+    display:inline-flex;
+    margin-top: 1px;
+    margin-left: 320px;
+    width: 400px;
+    height: 30px;
+    position: relative;
+    bottom: 38px;
+}
+
+.pesquisa {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid white;
+    /* padding: 2px; */
+    /* border-radius: 5px; */
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+}
+
+#lupaheader {
+    color: white;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    margin-left: 162px;
+    height: 30px;
+    width: 27px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#div esquerda {
+    width: 40px;
+    margin: 0px;
+}
+
+aside {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    z-index: 2;
+}
+
+#menubarra {
+    width: 400px;
+}
+
+#esquerda {
+    /* border: 1px solid red; */
+    background: #022038 ;
+    width: 263px;
+    height: 665px;
+}
+
+#esquerda1 {
+    font-size: 20px;
+    height: 10%;
+    text-align: center;
+}
+
+#esquerdapesquisa {
+    position: relative;
+    width: 200px;
+}
+
+#esquerdapesquisa input {
+    background: #115e6d;
+    border: 1px solid white;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    
+}
+
+#lupa {
+    color: white;
+    position:absolute;
+    top: 0px; 
+    left: 190px;
+    height: 70px;
+    z-index:10;
+    background:transparent;
+    outline:none;
+    border: 1px solid white;
+    width: 74px;
+    height: 70px;
+    cursor: pointer ;
+
+
+}
+
+#esquerdahome5 {
+    margin-top: 178px;
+}
+
+.caixaesquerda {
+    color: white;
+    width: 263px; 
+    height: 70px;
+    padding: 0px; 
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.caixaesquerda a {
+    font-family: 'Gentium Book Plus', serif;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 27px;
+    text-decoration: none;
+}
+
+.caixaesquerda:hover {
+    color: black;
+    background: white;
+    transition: 0.3s;
+}
+
+svg:hover {
+    fill: black;
+
+}
+
+.caixaesquerda a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.caixaesquerda-principal {
+    color: white;
+    width: 263px; 
+    height: 70px;
+    padding: 0px; 
+    font-size: 14px;
+    position: relative;
+    top: 25px;
+}
+
+#mais {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}
+

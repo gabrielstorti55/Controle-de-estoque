@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    
+</head>
+<body>
+<!-- ____________________________________________________________________________________________________________ -->
+    <!-- <button onclick="openModal()">Abrir Página</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Informações</h2>
+            <p>Aqui estão algumas informações dentro do modal.</p>
+            <p>Você pode adicionar mais conteúdo aqui.</p>
+
+            Nome: <input type="text">
+            Pedido feito: <input type="date"> 
+            Pedido entregue: <input type="date"> 
+            <button onclick="closeModal()">Fechar</button>
+        </div>
+    </div> -->
+<!-- ____________________________________________________________________________________________________________ -->
+
+<!-- ____________________________________________________________________________________________________________ -->
+    <div id="dfPessoas">
+        <form name="fPessoas">
+            <label>Nome</label> <br>
+            <input type="text" name="txtNome"><br><br>
+            <label>Pedido Feito</label><br>
+            <input type="date" name="txtdataFeito"><br><br>
+            <label>Pedido Entregue</label><br>
+            <input type="date" name="txtdataEntregue"><br><br>
+
+            <label>Descrição</label><br>
+            <input type="text" name="txtDescricao"><br><br>
+            <input type="button" value="Adicionar Pedido" onclick="Teste(txtNome.value, txtdataFeito.value, txtdataEntregue.value, txtDescricao.value)">
+        </form>
+    </div>
+    <br><br>
+    <div id="dtPessoas">
+        <table id="tbPessoas">
+            <thead>
+                <tr>
+                    <td>Codigo</td>
+                    <td>Nome</td>
+                    <td>Data Feito</td>
+                    <td>Data Entregue</td>
+                    <td>Descrição</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src="teste-JS.js"></script>
+</body>
+</html>

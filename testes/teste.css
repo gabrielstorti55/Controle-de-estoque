@@ -1,0 +1,39 @@
+/* ______________________________________________________________________________________________________________  */
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(243, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 9% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 500px;
+            height: 400px;
+            text-align: center;
+        }
+/* ______________________________________________________________________________________________________________  */
+
+#dfPessoas{
+    font:14px Verdana ;
+    margin-left: 35%;
+    margin-top: 50px;
+}
+
+#dtPessoas{
+    font:14px Verdana ;
+    margin-left: 18%;
+}
+
+table tr td {
+    width: 140px;
+}
