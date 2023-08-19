@@ -10,7 +10,6 @@ body {
 
 header {
     position:relative;
-    bottom: 20px;
     background: #115e6d;
     border-bottom: 1px solid rgb(255, 255, 255);
     margin-top: none;
