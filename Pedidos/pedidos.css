@@ -137,13 +137,6 @@ input.Models {
     right: 150px;
 }
 
-
-#dfPessoas{
-    font:14px Verdana ;
-    margin-left: 35%;
-    margin-top: 50px;
-}
-
 #dtPessoas{
     font:14px Verdana ;
     margin-left: 5px;
@@ -153,14 +146,58 @@ table tr td {
     width: 150px;
 }
 
+tr {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 25px;
+    width: 995px;
+    height: 30px;
+
+}
+
 thead {
     width: 1038px;
 }
 
+.Info {
+    border-bottom: 1px solid black;
+    width: 331px;
+}
+
+#trAlto {
+    position: relative;
+    left: 45px;
+    width: 995px;
+}
+
+#trBaixo {
+    position: relative;
+    left: 45px;
+    width: 995px;
+}
+
+
+#InfoDescricao{
+    position: relative;
+    top: 4px;
+    height: 28px;
+}
+
+
 #codigoPedido {
-    width: 1px;
-    height: 94px;
-    font-size: 10px;
+    display: flex;
+    position: absolute;
+    left: -25px;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 98px;
+    font-size: 20px;
     border-right: 1px solid black;
 }
 
+.codigoPedido {
+    position: relative;
+    text-align: center;
+}
