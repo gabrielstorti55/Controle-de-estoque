@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Atualização de Página com JS</title>
+</head>
+<body>
+  <h1>Informações do Modelo</h1>
+  <p><strong>Nome:</strong> <span id="nome"></span></p>
+  <p><strong>Idade:</strong> <span id="idade"></span></p>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <button id="botaoCriar">Criar</button>
+
+  <script>
+    // Simulação do modelo de dados
+    const model = {
+      nome: "Exemplo Nome",
+      idade: 25,
+      email: "exemplo@email.com"
+    };
+
+    // Função para atualizar as informações na página
+    function atualizarInformacoes() {
+      document.getElementById("nome").textContent = model.nome;
+      document.getElementById("idade").textContent = model.idade;
+      document.getElementById("email").textContent = model.email;
+    }
+
+    // Adiciona um ouvinte de evento ao botão
+    document.getElementById("botaoCriar").addEventListener("click", function() {
+      atualizarInformacoes();
+    });
+  </script>
+</body>
+</html>
+

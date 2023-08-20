@@ -1,60 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teste.css">
-    
+  <title>Exemplo de Criação de Pedidos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Seus estilos CSS aqui */
+  </style>
 </head>
 <body>
-<!-- ____________________________________________________________________________________________________________ -->
-    <!-- <button onclick="openModal()">Abrir Página</button>
+  <div id="bodyUsuario">
+        <div id="criarNovo">
+            <button id="botaoMais" class="BotaoPedidos" onclick="openModal()"> <i class="far fa-plus"></i> </button>
+            <div id="myModal" class="modal">
+                <form>
+                <div class="modal-content" id="janela">
+                    <h2>Crie um novo pedido</h2>
+                
+                    <label for="ModelsNome">Nome:</label>
+                    <input type="text" required class="Models" id="ModelsNome" name="nome">
+                
+                    <label for="ModelsFeito">Pedido feito:</label>
+                    <input type="date" required class="Models" id="ModelsFeito" name="pedido_feito">
+                
+                    <label for="ModelsEntregue">Pedido entregue:</label>
+                    <input type="date" required class="Models" id="ModelsEntregue" name="pedido_entregue">
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <h2>Informações</h2>
-            <p>Aqui estão algumas informações dentro do modal.</p>
-            <p>Você pode adicionar mais conteúdo aqui.</p>
+                    <label for="ModelsDescricao">Descrição:</label>
+                    <textarea name="txtDescricao" id="ModelsDescricao" cols="30" rows="10" class="Models"></textarea>
 
-            Nome: <input type="text">
-            Pedido feito: <input type="date"> 
-            Pedido entregue: <input type="date"> 
-            <button onclick="closeModal()">Fechar</button>
+                    <div id="botoes">
+                    <input id="botaoCriar" type="button" value="Criar" onclick="Criar()">
+                    <button id="botaoFechar" onclick="closeModal()">Fechar</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div> 
+
+        <h2>Lista de Pedidos</h2>
+        <div id="tabelasPedidos""> 
+          <table>
+          <tr>
+              <th>Nome</th>
+              <th>Pedido Feito</th>
+              <th>Pedido Entregue</th>
+              <th>Descrição</th>
+          </tr>
+          </table>
         </div>
-    </div> -->
-<!-- ____________________________________________________________________________________________________________ -->
+  </div>
 
-<!-- ____________________________________________________________________________________________________________ -->
-    <div id="dfPessoas">
-        <form name="fPessoas">
-            <label>Nome</label> <br>
-            <input type="text" name="txtNome"><br><br>
-            <label>Pedido Feito</label><br>
-            <input type="date" name="txtdataFeito"><br><br>
-            <label>Pedido Entregue</label><br>
-            <input type="date" name="txtdataEntregue"><br><br>
+  <script>
 
-            <label>Descrição</label><br>
-            <input type="text" name="txtDescricao"><br><br>
-            <input type="button" value="Adicionar Pedido" onclick="Teste(txtNome.value, txtdataFeito.value, txtdataEntregue.value, txtDescricao.value)">
-        </form>
-    </div>
-    <br><br>
-    <div id="dtPessoas">
-        <table id="tbPessoas">
-            <thead>
-                <tr>
-                    <td>Codigo</td>
-                    <td>Nome</td>
-                    <td>Data Feito</td>
-                    <td>Data Entregue</td>
-                    <td>Descrição</td>
-                </tr>
-            </thead>
-        </table>
-    </div>
+    function formatarData(data) {
+      const dataObj = new Date(data);
+      const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+      return dataObj.toLocaleDateString('pt-BR', options);
+    }
 
-    <script src="teste-JS.js"></script>
+    class Pedido {
+      constructor(nome, pedidoFeito, pedidoEntregue, descricao) {
+        this.nome = nome;
+        this.pedidoFeito = pedidoFeito;
+        this.pedidoEntregue = pedidoEntregue;
+        this.descricao = descricao;
+      }
+    }
+    function openModal() {
+      // Seu código para abrir o modal aqui
+    }
+
+    function closeModal() {
+      // Seu código para fechar o modal aqui
+    }
+
+    function Criar() {
+      const nome = document.getElementById("ModelsNome").value;
+      const pedidoFeito = document.getElementById("ModelsFeito").value;
+      const pedidoEntregue = document.getElementById("ModelsEntregue").value;
+      const descricao = document.getElementById("ModelsDescricao").value;
+
+      const pedido = new Pedido(nome, pedidoFeito, pedidoEntregue, descricao);
+
+      const tabelaPedidos = document.createElement("table");
+      const headerRow = tabelaPedidos.insertRow();
+      const cellNomeHeader = headerRow.insertCell();
+      const cellPedidoFeitoHeader = headerRow.insertCell();
+      const cellPedidoEntregueHeader = headerRow.insertCell();
+      const cellDescricaoHeader = headerRow.insertCell();
+      
+      cellNomeHeader.innerHTML = "<strong>Nome</strong>";
+      cellPedidoFeitoHeader.innerHTML = "<strong>Pedido Feito</strong>";
+      cellPedidoEntregueHeader.innerHTML = "<strong>Pedido Entregue</strong>";
+      cellDescricaoHeader.innerHTML = "<strong>Descrição</strong>";
+
+      const newRow = tabelaPedidos.insertRow();
+      const cellNome = newRow.insertCell();
+      const cellPedidoFeito = newRow.insertCell();
+      const cellPedidoEntregue = newRow.insertCell();
+      const cellDescricao = newRow.insertCell();
+
+      cellNome.innerHTML = pedido.nome;
+      cellPedidoFeito.innerHTML = formatarData(pedido.pedidoFeito);
+      cellPedidoEntregue.innerHTML = formatarData(pedido.pedidoEntregue);
+      cellDescricao.innerHTML = pedido.descricao;
+
+      const tabelasPedidos = document.getElementById("tabelasPedidos");
+      tabelasPedidos.appendChild(tabelaPedidos);
+
+      closeModal();
+}
+
+  </script>
 </body>
 </html>
+

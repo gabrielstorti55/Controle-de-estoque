@@ -73,34 +73,25 @@
                         <textarea name="txtDescricao" id="ModelsDescricao" cols="30" rows="10" class="Models"></textarea>
 
                         <div id="botoes">
-                            <input id="botaoCriar" type="button" value="Criar" onclick="Criar(nome.value, pedido_feito.value, pedido_entregue.value, txtDescricao.value)">
-                            <button id="botaoFechar" onclick="closeModal()">Fechar</button>
-                            
+                            <input id="botaoCriar" type="button" value="Criar" onclick="Criar()">
+                            <button id="botaoFechar" type="button" onclick="FecharModal()">Fechar</button>
                         </div>
                   </div>
                 </form>
               </div>
         </div> 
 
-        <div id="dtPessoas">
-            <table id="tbPessoas">
-                <thead>
-                    <tr>
-                        <div class="codigoPedido">
-                            <td id="codigoPedido">99</td>
-                        </div>
-                    </tr>
-                    <tr id="trAlto">
-                        <td id="InfoNome" class="Info">Nome:</td>
-                        <td id="InfoFeito" class="Info">Data Feito:</td>
-                        <td id="InfoEntregue" class="Info">Data Entregue:</td>
-                    </tr>
-                    <tr id="trBaixo">
-                        <td id="InfoDescricao">Descrição:</td>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+
+        <table id="tabelaPedidos">
+            <tr>
+                <th class="thTabela">Nome</th>
+                <th class="thTabela">Pedido Feito</th>
+                <th class="thTabela">Pedido Entregue</th>
+                <div id="bordaTabela">
+                    <th id="Descricao" class="thTabela">Descrição</th>
+                </div>
+            </tr>
+        </table>
 
     </div>
 
